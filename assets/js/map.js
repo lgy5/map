@@ -20,7 +20,7 @@ var MapBase = {
       noWrap: true,
       bounds: boundsTiles
     });
-    mapLayers['Local'] = L.tileLayer('file:///storage/emulated/0/zzz/rdr/assets/maps/detailed/{z}/{x}_{y}.jpg', {
+    mapLayers['Dark'] = L.tileLayer('file:///storage/emulated/0/zzz/rdr/assets/maps/detailed/{z}/{x}_{y}.jpg', {
       noWrap: true,
       bounds: boundsTiles
     });
