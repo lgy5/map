@@ -12,7 +12,7 @@ var MapBase = {
       boundsTiles = L.latLngBounds(southWestTiles, northEastTiles);
 
     var mapLayers = [];
-    mapLayers['Default'] = L.tileLayer('assets/maps/detailed/{z}/{x}_{y}.jpg', {
+    mapLayers['Default'] = L.tileLayer('https://map5.gitee.io/rdr/assets/maps/detailed/{z}/{x}_{y}.jpg', {
       noWrap: true,
       bounds: boundsTiles
     });
