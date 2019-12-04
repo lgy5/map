@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="shortcut icon" href="./favicon.ico" />
+  <title>Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="assets/js/jquery.cookie.js"></script>
+  <link rel="stylesheet" href="assets/css/styles.css?nocache=112" />
+</head>
+<body>
+  <div class="side-menu">
+    <h2>
+      <span data-text="menu.collectables">Collectables</span>
+     
+    </h2>
+    <div class="collectables-counter" data-text="menu.collectables_counter">Collected -- of --</div>
+    <div class="hide-show-container">
+      <a data-text="menu.hide_all" href="javascript:void(0);" onclick="Menu.hideAll()">Hide all</a>
+      <a data-text="menu.show_all" href="javascript:void(0);" onclick="Menu.showAll()">Show all</a>
+    </div>
+    <div>
+      <div class="menu-option clickable" data-type="american_flowers">
+        <img class="icon" src="./assets/images/icons/american-flowers.png" />
+        <span data-text="menu.american_flowers">American Wild Flowers</span>
+        <div class="open-submenu"></div>
+      </div>
+      <div class="menu-hidden" data-type="american_flowers">
+        <p class="collection-value">
+          <span data-text="menu.collectables_value" class="disabled">Value</span>: $155.50
+        </p>
+      </div>
+    </div>
+	<div>
+      <div class="menu-option clickable" data-type="coin">
+        <img class="icon" src="./assets/images/icons/coin.png" />
+        <span data-text="menu.coin">Coins</span>
+        <div class="open-submenu"></div>
+      </div>
+      <div class="menu-hidden" data-type="coin">
+        <p class="collection-value">
+          <span data-text="menu.collectables_value">Value</span>: $540.00
+        </p>
+      </div>
+    </div>
+    
+    <div>
+      <div class="menu-option clickable" data-type="random">
+        <img class="icon" src="./assets/images/icons/random.png" />
+        <span data-text="menu.random_spots">Random Spots</span>
+      </div>
+    </div>
+	<div class="search-container">
+      <h2 data-text="menu.search">Search</h2>
+      <input class="input-search" type="text" id="search" placeholder="Search items. Separated by ;" autocomplete="off">
+    </div>
+
+    <div class="settings-container">
+      <h2 data-text="menu.settings">Settings</h2>
+      <div class="input-container">
+        <label for="day" data-text="menu.day">Day</label>
+        <input id="day" class="input-day" type="number" min="1" max="3">
+      </div>
+      
+    </div>
+ 
+    <div class="menu-option clickable" data-type="nazar">
+      <img class="icon" src="./assets/images/icons/nazar.png" />
+      <span data-text="madam_nazar.name">Madam Nazar</span>
+    </div>
+    <div class="menu-option clickable" data-type="fast_travel">
+      <img class="icon" src="./assets/images/icons/fast-travel.png" />
+      <span data-text="menu.fast_travel">Fast Travel</span>
+    </div>
+    <div class="menu-option clickable" data-type="egg_encounter">
+      <img class="icon" src="./assets/images/icons/egg-encounter.png" />
+      <span data-text="menu.egg_encounter" class="disabled">Egg Encounter</span>
+    </div>
+    <div class="menu-option clickable" data-type="grave_robber">
+      <img class="icon" src="./assets/images/icons/grave-robber.png" />
+      <span data-text="menu.grave_robber" class="disabled">Grave Robber</span>
+    </div>
+    <div class="menu-option clickable" data-type="treasure_hunter">
+      <img class="icon" src="./assets/images/icons/treasure-hunter.png" />
+      <span data-text="menu.treasure_hunter" class="disabled">Treasure Hunter</span>
+    </div>
+    <div class="menu-option clickable" data-type="tree_map">
+      <img class="icon" src="./assets/images/icons/tree-map.png" />
+      <span data-text="menu.tree_map" class="disabled">Treasure Map</span>
+    </div>
+    <div>
+      <div class="menu-option clickable" data-type="treasure">
+        <img class="icon" src="./assets/images/icons/treasure.png" />
+        <span data-text="menu.treasures" class="disabled">Treasures</span>
+        <div class="open-submenu"></div>
+      </div>
+      <div class="menu-hidden" data-type="treasure">
+      </div>
+    </div>
+   
+
+  </div>
+  <div class="menu-toggle">></div>
+
+  <div class="timer-container">
+    <div id="countdown">--:--:--</div>
+    <div id="day-cycle"></div>
+  </div>
+  <div class="counter-container">
+    <p id="item-counter">-- of --</p>
+  </div>
+  <div id="map"></div>
+
+  <div class="lat-lng-container">
+    <p></p><button id="lat-lng-container-close-button">×</button>
+  </div>
+  <script src="assets/js/marker.js?nocache=114"></script>
+  <script src="assets/js/treasures.js?nocache=114"></script>
+  <script src="assets/js/encounters.js?nocache=114"></script>
+  <script src="assets/js/map.js?nocache=114"></script>
+  <script src="assets/js/language.js?nocache=115"></script>
+  <script src="assets/js/menu.js?nocache=114"></script>
+  <script src="assets/js/routes.js?nocache=114"></script>
+  <script src="assets/js/scripts.js?nocache=114"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-39999584-4');
+  </script>
+
+</body>
+
+</html>
